@@ -10,10 +10,11 @@ module.exports = router;
 router.post('/logs/post', async(req, res) => {
     const data = new Log({
         datetime: req.body.datetime,
-        current_temperature: req.body.current_temperature,
-        current_humedity: req.body.current_humedity,
         adjustment_temperature: req.body.adjustment_temperature,
-        state: req.body.state
+        pumb_state: req.body.pumb_state,
+        mHigh_state: req.body.mHigh_state,
+        mLow_state: req.body.mLow_state,
+        autoMode_state: req.body.autoMode_state,
     })
 
     try {
