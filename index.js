@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const mongoString = process.env.DATABASE_URL
 const logs = require('./routes/users');
 const users = require('./routes/logs');
+const temp = require('./routes/temp');
 
 const app = express();
 
@@ -19,6 +20,8 @@ app.listen(PORT, () => {
 app.use('/api', logs)
 
 app.use('/api', users)
+
+app.use('/api', temp)
 
 mongoose.connect(mongoString);
 const database = mongoose.connection
