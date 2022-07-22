@@ -22,6 +22,14 @@ router.post('/temp/post', async(req, res) => {
     }
 })
 
+router.get('/temp/getAll', async(req, res) => {
+    try {
+        const data = await Temp.find().sort({ _id: -1 });
+        res.json(data)
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+})
 
 router.get('/temp/getLast', async(req, res) => {
     try {
