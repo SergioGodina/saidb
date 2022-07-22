@@ -11,7 +11,7 @@ router.post('/temp/post', async(req, res) => {
     const data = new Temp({
         datetime: req.body.datetime,
         current_temperature: req.body.current_temperature,
-        current_humedity: req.body.current_humedity
+        current_humidity: req.body.current_humidity
     })
 
     try {
