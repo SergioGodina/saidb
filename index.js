@@ -18,8 +18,6 @@ app.listen(PORT, () => {
     console.warn(`App listening on http://localhost:${PORT}`);
 });
 
-
-
 app.use('/api', logs)
 
 app.use('/api', users)

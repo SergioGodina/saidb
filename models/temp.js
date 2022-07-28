@@ -3,15 +3,15 @@ const mongoose = require('mongoose');
 const temp = new mongoose.Schema({
     datetime: {
         required: true,
-        type: Number
+        type: String
     },
     current_temperature: {
         required: true,
-        type: Number
+        type: String
     },
     current_humidity: {
         required: true,
-        type: Number
+        type: String
     }
 })
 
