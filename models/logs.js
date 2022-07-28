@@ -3,27 +3,27 @@ const mongoose = require('mongoose');
 const logs = new mongoose.Schema({
     datetime: {
         required: true,
-        type: String
+        type: Number
     },
     adjustment_temperature: {
         required: true,
-        type: String
+        type: Number
     },
     pumb_state: {
         required: true,
-        type: String
+        type: Boolean
     },
     mHigh_state: {
         required: true,
-        type: String
+        type: Boolean
     },
     mLow_state: {
         required: true,
-        type: String
+        type: Boolean
     },
     autoMode_state: {
         required: true,
-        type: String
+        type: Boolean
     }
 })
 
